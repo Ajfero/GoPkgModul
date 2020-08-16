@@ -1,15 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/Ajfero/GoPkgModul.git/greet"
+)
 
 func main() {
 	regards()
-	fmt.Println(greet.English)
-	fmt.Println(greet.Italian)
-	fmt.Println(greet.Spanish)
+	greet.English()
+	greet.Italian()
+	greet.Spanish()
 }
 
 func regards() {
-	title := "Diferents languajes regards"
-	fmt.Println("Hello in English is. ", title)
+	title := "Diferents languajes regards: "
+	fmt.Println(title)
 }

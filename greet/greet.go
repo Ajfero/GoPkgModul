@@ -1,18 +1,27 @@
-package main
+package greet
 
 import "fmt"
 
-func English() {
+// Para crear variables globales del paquete se debe realizar con la palabra reservada VAR, no funcion con :=
+var Emoji = "😘" // variable no exportadas
+
+// greet.GreetEnglish() //* Redundancia
+func English() string {
 	hello := "Hi"
-	fmt.Println("Hello in English is. ", hello)
+	fmt.Println("The word 'Hello' in English is: ", hello)
+	return "Ok" + Emoji
+
 }
 
-func Spanish() {
+func Spanish() string {
 	hello := "Hola"
-	fmt.Println("Hello in Spanish is. ", hello)
+	fmt.Println("The word 'Hello' in Spanish is: ", hello)
+	return "Ok" + Emoji
+
 }
 
-func Italian() {
+func Italian() string {
 	hello := "Chiao"
-	fmt.Println("Hello in Spanish is, ", hello)
+	fmt.Println("The word 'Hello' in Spanish is: ", hello)
+	return "Ok" + Emoji
 }
